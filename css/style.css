@@ -291,6 +291,7 @@ body {
 .header__logo {
   font-size: 22px;
   font-weight: bold;
+  color: white;
 }
 .header__nav {
   display: -webkit-box;
@@ -318,7 +319,7 @@ body {
   transition: 0.3s;
 }
 .header__nav a:hover {
-  color: #0f8;
+  color: #00aeff;
 }
 .header__nav a:hover::after {
   width: 100%;
