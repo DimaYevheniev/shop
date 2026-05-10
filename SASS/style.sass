@@ -10,6 +10,9 @@ body
     font-size: 16px
     letter-spacing: 2px
     background-color: white
+    main-height: 100vh
+    display: flex
+    flex-direction: column
 
 
 .container
@@ -312,10 +315,60 @@ body
 .banner--adidas
     background: url(../img/adidas_baner.jpg) center / cover no-repeat
 
-
 .banner--newbalance
     background: url(../img/new_balance_baner.jpg) center / cover no-repeat
 
 .banner--Jacquemus
     background: url(../img/Jacquemus_baner.jpg) center / cover no-repeat
 
+main
+    flex: 1
+
+.footer
+    background: #000
+    padding: 90px 60px 30px
+    margin-top: 100px
+
+
+
+    &__container
+        display: flex
+        justify-content: space-between
+        gap: 60px
+        flex-wrap: wrap
+
+    &__logo
+        h2
+            color: #fff
+            font-size: 70px
+            font-weight: 900
+            letter-spacing: 8px
+            line-height: 1
+            text-shadow: 0 0 5px rgba(0, 150, 255, 1), 0 0 20px rgba(0, 150, 255, 0.8), 0 0 40px rgba(0, 150, 255, 0.5)
+
+    &__column
+        display: flex
+        flex-direction: column
+        gap: 18px
+
+        h3
+            color: white
+            font-size: 24px
+            margin-bottom: 10px
+            font-weight: 700
+
+        a
+            color: #bdbdbd
+            text-decoration: none
+            font-size: 17px
+            transition: 0.3s
+
+            &:hover
+                color: white
+                transform: translateX(5px)
+
+    &__bottom
+        margin-top: 70px
+        text-align: center
+        color: #777
+        font-size: 14px

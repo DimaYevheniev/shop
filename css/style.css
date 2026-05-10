@@ -12,6 +12,14 @@ body {
   font-size: 16px;
   letter-spacing: 2px;
   background-color: white;
+  main-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .container {
@@ -462,4 +470,69 @@ body {
 
 .banner--Jacquemus {
   background: url(../img/Jacquemus_baner.jpg) center/cover no-repeat;
+}
+
+main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.footer {
+  background: #000;
+  padding: 90px 60px 30px;
+  margin-top: 100px;
+}
+.footer__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 60px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.footer__logo h2 {
+  color: #fff;
+  font-size: 70px;
+  font-weight: 900;
+  letter-spacing: 8px;
+  line-height: 1;
+  text-shadow: 0 0 5px rgb(0, 150, 255), 0 0 20px rgba(0, 150, 255, 0.8), 0 0 40px rgba(0, 150, 255, 0.5);
+}
+.footer__column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 18px;
+}
+.footer__column h3 {
+  color: white;
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+.footer__column a {
+  color: #bdbdbd;
+  text-decoration: none;
+  font-size: 17px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.footer__column a:hover {
+  color: white;
+  -webkit-transform: translateX(5px);
+          transform: translateX(5px);
+}
+.footer__bottom {
+  margin-top: 70px;
+  text-align: center;
+  color: #777;
+  font-size: 14px;
 }
