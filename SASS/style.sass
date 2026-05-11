@@ -442,10 +442,13 @@ main
     border-radius: 25px
     padding: 30px
     box-shadow: 0 5px 20px rgba(0,0,0,0.04)
-    transition: .3s
+    transition:    
+        transform: cubic-bezier(.22,1,.36,1)
+        box-shadow: cubic-bezier(.22,1,.36,1)
 
     &:hover
-        transform: translateY(-6px)
+        transform: translateY(-8px)
+        box-shadow: 0 20px 40px rgba(0,0,0,.18)
 
     h3
         font-size: 20px
@@ -471,7 +474,8 @@ main
     font-weight: 700
     color: #111
     margin-bottom: 40px
-    text-shadow: 0 4px 12px rgba(0,0,0,0.15)
+    text-shadow: 0 5px 18px rgba(0,0,0,.35)
+
 
 .about-assortment__box
     width: 100%
@@ -481,6 +485,14 @@ main
     padding: 60px
     text-align: center
     text-shadow: 0 4px 12px rgba(0,0,0,0.15)
+    box-shadow: 0 5px 20px rgba(0,0,0,0.04)
+    transition:
+        transform: cubic-bezier(.22,1,.36,1),
+        box-shadow: cubic-bezier(.22,1,.36,1)
+
+    &:hover
+        transform: translateY(-8px)
+        box-shadow: 0 20px 40px rgba(0,0,0,.18)
 
     p
         font-size: 18px
@@ -515,10 +527,13 @@ main
     border: 1px solid #e5e5e5
     padding: 30px
     box-shadow: 0 5px 20px rgba(0,0,0,0.05)
-    transition: .3s
+    transition:
+        transform: cubic-bezier(.22,1,.36,1),
+        box-shadow: cubic-bezier(.22,1,.36,1)
 
     &:hover
-        transform: translateY(-6px)
+        transform: translateY(-8px)
+        box-shadow: 0 20px 40px rgba(0,0,0,.18)
 
     h3
         font-size: 20px

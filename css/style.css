@@ -617,12 +617,14 @@ main {
   padding: 30px;
   -webkit-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
           box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  transition-transform: cubic-bezier(0.22, 1, 0.36, 1);
+  transition-box-shadow: cubic-bezier(0.22, 1, 0.36, 1);
 }
 .about-story__card:hover {
-  -webkit-transform: translateY(-6px);
-          transform: translateY(-6px);
+  -webkit-transform: translateY(-8px);
+          transform: translateY(-8px);
+  -webkit-box-shadow: 0 20px 40px rgba(0, 0, 0, 0.18);
+          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.18);
 }
 .about-story__card h3 {
   font-size: 20px;
@@ -648,7 +650,7 @@ main {
   font-weight: 700;
   color: #111;
   margin-bottom: 40px;
-  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  text-shadow: 0 5px 18px rgba(0, 0, 0, 0.35);
 }
 
 .about-assortment__box {
@@ -659,6 +661,16 @@ main {
   padding: 60px;
   text-align: center;
   text-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+          box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+  transition-transform: cubic-bezier(0.22, 1, 0.36, 1);
+  transition-box-shadow: cubic-bezier(0.22, 1, 0.36, 1);
+}
+.about-assortment__box:hover {
+  -webkit-transform: translateY(-8px);
+          transform: translateY(-8px);
+  -webkit-box-shadow: 0 20px 40px rgba(0, 0, 0, 0.18);
+          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.18);
 }
 .about-assortment__box p {
   font-size: 18px;
@@ -701,12 +713,14 @@ main {
   padding: 30px;
   -webkit-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
           box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  transition-transform: cubic-bezier(0.22, 1, 0.36, 1);
+  transition-box-shadow: cubic-bezier(0.22, 1, 0.36, 1);
 }
 .about-benefits__card:hover {
-  -webkit-transform: translateY(-6px);
-          transform: translateY(-6px);
+  -webkit-transform: translateY(-8px);
+          transform: translateY(-8px);
+  -webkit-box-shadow: 0 20px 40px rgba(0, 0, 0, 0.18);
+          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.18);
 }
 .about-benefits__card h3 {
   font-size: 20px;
