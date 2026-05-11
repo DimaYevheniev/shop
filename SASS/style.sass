@@ -190,19 +190,23 @@ body
     justify-content: space-between
     padding: 0 40px
     z-index: 1000
+
     &__logo
         font-size: 22px
         font-weight: bold
         color: white
+
     &__nav
         display: flex
         gap: 25px
+
         a
             color: white
             text-decoration: none
             font-size: 16px
             position: relative
             transition: 0.3s
+
             &::after
                 content: ""
                 position: absolute
@@ -212,11 +216,39 @@ body
                 height: 2px
                 background: white
                 transition: 0.3s
+
             &:hover
                 color: #00aeff
+
                 &::after
                     width: 100%
-        
+
+    &__right
+        display: flex
+        align-items: center
+        gap: 20px
+
+    &__cart
+        width: 45px
+        height: 45px
+        display: flex
+        align-items: center
+        justify-content: center
+        border-radius: 50%
+        color: white
+        text-decoration: none
+        transition: .3s ease
+        border: 2px solid transparent
+
+        &:hover
+            color: #00aeff
+            border: 2px solid white
+            box-shadow: 0 10px 25px rgba(0,0,0,.25)
+
+
+        svg
+            width: 24px
+            height: 24px
 
 .catalog
     display: flex
