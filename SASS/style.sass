@@ -230,16 +230,10 @@ body
         gap: 20px
 
     &__cart
-        width: 45px
-        height: 45px
-        display: flex
-        align-items: center
-        justify-content: center
-        border-radius: 50%
-        color: white
-        text-decoration: none
-        transition: .3s ease
-        border: 2px solid transparent
+        position: relative
+    width: 45px
+    height: 45px
+    display: block
 
         &:hover
             color: #00aeff
@@ -667,6 +661,13 @@ html, body
     .header
         height: 60px
         padding: 0 15px
+        &__cart
+            position: relative
+            width: 45px
+            height: 45px
+            display: flex
+            align-items: center
+            justify-content: center
 
     .header__nav
         display: none
@@ -845,3 +846,161 @@ html, body
     margin-top: 20px
     color: #555
     line-height: 1.6
+
+.cart-count
+    position: absolute
+    top: -6px
+    right: -6px
+    transform: translate(25%, -25%)
+    min-width: 18px
+    height: 18px
+    padding: 0 5px
+    background: #00aeff
+    border-radius: 999px
+    display: flex
+    align-items: center
+    justify-content: center
+    font-size: 10px
+    color: white
+    font-weight: 700
+    z-index: 10
+
+.cart-overlay
+    position: fixed
+    inset: 0
+    background: rgba(0,0,0,.45)
+    opacity: 0
+    visibility: hidden
+    transition: .3s
+    z-index: 9998
+
+    &.active
+        opacity: 1
+        visibility: visible
+
+.cart-sidebar
+    position: fixed
+    top: 0
+    right: -500px
+    width: 500px
+    height: 100vh
+    background: white
+    z-index: 9999
+    transition: .4s ease
+    display: flex
+    flex-direction: column
+    padding: 35px
+
+    &.active
+        right: 0
+
+.cart-sidebar__top
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 40px
+
+    h2
+        font-size: 42px
+        color: #111
+
+.cart-sidebar__close
+    background: none
+    border: none
+    font-size: 45px
+    cursor: pointer
+
+.cart-items
+    flex: 1
+    overflow-y: auto
+    display: flex
+    flex-direction: column
+    gap: 25px
+
+.cart-item
+    display: flex
+    gap: 20px
+    border-bottom: 1px solid #eee
+    padding-bottom: 25px
+
+.cart-item__img
+    width: 120px
+    height: 120px
+    object-fit: cover
+    border-radius: 20px
+    background: #f5f5f5
+
+.cart-item__info
+    flex: 1
+
+    h3
+        font-size: 22px
+        color: #111
+        margin-bottom: 10px
+
+    p
+        margin-bottom: 20px
+        font-size: 16px
+
+.cart-item__controls
+    display: flex
+    align-items: center
+    gap: 15px
+
+    button
+        width: 34px
+        height: 34px
+        border-radius: 50%
+        border: 1px solid #111
+        background: white
+        cursor: pointer
+        font-size: 20px
+
+.cart-item__right
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: flex-end
+
+.cart-item__price
+    font-size: 22px
+    color: #111
+    font-weight: 700
+
+.cart-item__delete
+    background: none
+    border: none
+    font-size: 22px
+    cursor: pointer
+
+.cart-sidebar__bottom
+    padding-top: 30px
+    border-top: 1px solid #ddd
+
+.cart-total
+    font-size: 28px
+    font-weight: 700
+    color: #111
+    margin-bottom: 25px
+
+.cart-order
+    width: 100%
+    height: 75px
+    border: none
+    background: black
+    color: white
+    border-radius: 20px
+    font-size: 18px
+    font-weight: 700
+    cursor: pointer
+    transition: .3s
+
+    &:hover
+        opacity: .85
+
+@media (max-width: 768px)
+
+    .cart-sidebar
+        width: 100%
+
+header

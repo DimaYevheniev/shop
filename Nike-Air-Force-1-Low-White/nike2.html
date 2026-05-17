@@ -59,7 +59,13 @@
                 <button class="product-quantity__btn" id="plus">+</button>
             </div>
 
-            <button class="product-cart">Добавить в корзину</button>
+            <button
+                class="product-cart"
+                data-id="1"
+                data-title="Nike Air Force 1"
+                data-price="4499"
+                data-image="../img/nike/Nike Air Force 1 Low White.jpg">Добавить в корзину
+            </button>
 
             <div class="product-description">
                 Классические Nike Air Force 1 с удобной подошвой.
@@ -81,6 +87,14 @@
         <a href="/розпродаж/sale.html">Розпродаж</a>
         <a href="/контакти/contacts.html">Контакты</a>
     </nav>
+    <div class="header__right">
+
+        <a href="#" class="header__cart" id="cartBtn">
+            🛒
+            <span class="cart-count" id="cartCount">0</span>
+        </a>
+
+    </div>
 
 </header>
 
@@ -125,6 +139,38 @@
     </div>
 
 </footer>
+
+<div class="cart-overlay" id="cartOverlay"></div>
+
+<div class="cart-sidebar" id="cartSidebar">
+
+    <div class="cart-sidebar__top">
+
+        <h2>Кошик</h2>
+
+        <button class="cart-sidebar__close" id="closeCart">
+            ×
+        </button>
+
+    </div>
+
+    <div class="cart-items" id="cartItems"></div>
+
+    <div class="cart-sidebar__bottom">
+
+        <div class="cart-total">
+            Разом:
+            <span id="cartTotal">0 грн</span>
+        </div>
+
+        <button class="cart-order">
+            ОФОРМИТИ ЗАМОВЛЕННЯ
+        </button>
+
+    </div>
+
+</div>
+
 <script src="../js/script.js"></script>
 </body>
 </html>
