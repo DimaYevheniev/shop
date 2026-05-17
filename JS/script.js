@@ -1,8 +1,15 @@
-
 document.querySelectorAll(".product-gallery__item img").forEach(img => {
+
     img.addEventListener("click", function () {
-        document.getElementById("mainImage").src = this.src;
+
+        const mainImage = document.getElementById("mainImage");
+
+        if (mainImage) {
+            mainImage.src = this.src;
+        }
+
     });
+
 });
 
 let count = 1;
@@ -11,17 +18,27 @@ const countEl = document.getElementById("count");
 const plus = document.getElementById("plus");
 const minus = document.getElementById("minus");
 
-plus.addEventListener("click", () => {
-    count++;
-    countEl.textContent = count;
-});
+if (plus && minus && countEl) {
 
-minus.addEventListener("click", () => {
-    if (count > 1) {
-        count--;
+    plus.addEventListener("click", () => {
+
+        count++;
         countEl.textContent = count;
-    }
-});
+
+    });
+
+    minus.addEventListener("click", () => {
+
+        if (count > 1) {
+
+            count--;
+            countEl.textContent = count;
+
+        }
+
+    });
+
+}
 
 document.querySelectorAll(".product-sizes__btn").forEach(btn => {
 
@@ -36,8 +53,6 @@ document.querySelectorAll(".product-sizes__btn").forEach(btn => {
 
 });
 
-
-
 const cartBtn = document.getElementById("cartBtn");
 const cartSidebar = document.getElementById("cartSidebar");
 const closeCart = document.getElementById("closeCart");
@@ -48,41 +63,50 @@ const cartCount = document.getElementById("cartCount");
 
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-
-
 function openCart() {
 
-    cartSidebar.classList.add("active");
-    cartOverlay.classList.add("active");
+    if (cartSidebar && cartOverlay) {
+
+        cartSidebar.classList.add("active");
+        cartOverlay.classList.add("active");
+
+    }
 
 }
-
-
 
 function closeCartFunc() {
 
-    cartSidebar.classList.remove("active");
-    cartOverlay.classList.remove("active");
+    if (cartSidebar && cartOverlay) {
+
+        cartSidebar.classList.remove("active");
+        cartOverlay.classList.remove("active");
+
+    }
 
 }
 
+if (cartBtn) {
 
+    cartBtn.addEventListener("click", (e) => {
 
-cartBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        openCart();
 
-    e.preventDefault();
-    openCart();
+    });
 
-});
+}
 
+if (closeCart) {
+    closeCart.addEventListener("click", closeCartFunc);
+}
 
-
-closeCart.addEventListener("click", closeCartFunc);
-cartOverlay.addEventListener("click", closeCartFunc);
-
-
+if (cartOverlay) {
+    cartOverlay.addEventListener("click", closeCartFunc);
+}
 
 function updateCart() {
+
+    if (!cartItems || !cartTotal || !cartCount) return;
 
     cartItems.innerHTML = "";
 
@@ -92,11 +116,11 @@ function updateCart() {
     if (cart.length === 0) {
 
         cartItems.innerHTML = `
-        
+
         <div class="empty-cart">
             Корзина пуста
         </div>
-        
+
         `;
 
     }
@@ -107,7 +131,7 @@ function updateCart() {
         totalCount += item.quantity;
 
         cartItems.innerHTML += `
-        
+
         <div class="cart-item">
 
             <img src="${item.image}" class="cart-item__img">
@@ -116,7 +140,7 @@ function updateCart() {
 
                 <h3>${item.title}</h3>
 
-                <p>Размер: ${item.size}</p>
+                ${item.size ? `<p>Размер: ${item.size}</p>` : ""}
 
                 <div class="cart-item__controls">
 
@@ -147,7 +171,7 @@ function updateCart() {
             </div>
 
         </div>
-        
+
         `;
 
     });
@@ -159,16 +183,12 @@ function updateCart() {
 
 }
 
-
-
 function removeItem(index) {
 
     cart.splice(index, 1);
     updateCart();
 
 }
-
-
 
 function changeQuantity(index, value) {
 
@@ -184,11 +204,7 @@ function changeQuantity(index, value) {
 
 }
 
-
-
 const addToCartBtn = document.querySelector(".product-cart");
-
-
 
 if (addToCartBtn) {
 
@@ -206,8 +222,10 @@ if (addToCartBtn) {
         const image =
             document.getElementById("mainImage").src;
 
-        const size =
-            document.querySelector(".product-sizes__btn.active").textContent;
+        const sizeBtn =
+            document.querySelector(".product-sizes__btn.active");
+
+        const size = sizeBtn ? sizeBtn.textContent : "";
 
         const existingItem = cart.find(item =>
             item.title === title && item.size === size
@@ -230,7 +248,6 @@ if (addToCartBtn) {
         }
 
         updateCart();
-        openCart();
 
         addToCartBtn.textContent = "Добавлено ✓";
 
@@ -243,7 +260,5 @@ if (addToCartBtn) {
     });
 
 }
-
-
 
 updateCart();

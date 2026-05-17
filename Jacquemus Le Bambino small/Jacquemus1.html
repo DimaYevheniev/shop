@@ -3,9 +3,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Product Page</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    
+
+
+
+<main>
+
+    <section class="product-page">
+
+        <div class="product-gallery">
+
+            <div class="product-gallery__small">
+
+                <div class="product-gallery__item">
+                    <img src="../img.jacquemus/Jacquemus Le Bambino — Small handbag with adjustable crossbody strap.jpg" alt="">
+                </div>
+
+                <div class="product-gallery__item">
+                    <img src="../img.jacquemus/Jacquemus Le Bambino — Small handbag with adjustable crossbody strap.jpg" alt="">
+                </div>
+
+                <div class="product-gallery__item">
+                    <img src="../img.jacquemus/Jacquemus Le Bambino — Small handbag with adjustable crossbody strap.jpg" alt="">
+                </div>
+
+            </div>
+
+            <div class="product-gallery__big">
+                <img id="mainImage" src="../img.jacquemus/Jacquemus Le Bambino — Small handbag with adjustable crossbody strap.jpg" alt="">
+            </div>
+
+        </div>
+
+        <div class="product-info">
+
+            <div class="product-info__brand">Jacquemus</div>
+
+            <h1 class="product-info__title">Jacquemus Le Bambino — Small crossbody strap</h1>
+
+            <div class="product-info__price">12 000 грн</div>
+
+
+
+            <div class="product-quantity">
+                <button class="product-quantity__btn" id="minus">-</button>
+                <div class="product-quantity__count" id="count">1</div>
+                <button class="product-quantity__btn" id="plus">+</button>
+            </div>
+
+            <button
+                class="product-cart"
+                data-id="1"
+                data-title="Jacquemus Le Bambino — Small crossbody strap"
+                data-price="12000"
+                data-image="../img.jacquemus/Jacquemus Le Bambino — Small handbag with adjustable crossbody strap.jpg">Добавить в корзину
+            </button>
+
+            <div class="product-description">
+                красивая сумка от jacquemus
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+<header class="header">
+
+    <div class="header__logo">Leecore</div>
+
+    <nav class="header__nav">
+        <a href="/новинки/new-items.html">Новинки</a>
+        <a href="/про-нас/about-us.html">Про нас</a>
+        <a href="/розпродаж/sale.html">Розпродаж</a>
+        <a href="/контакти/contacts.html">Контакты</a>
+    </nav>
+    <div class="header__right">
+
+        <a href="#" class="header__cart" id="cartBtn">
+            🛒
+            <span class="cart-count" id="cartCount">0</span>
+        </a>
+
+    </div>
+
+</header>
+
+<footer class="footer">
+
+    <div class="footer__container">
+
+        <div class="footer__logo">
+            <h2>LEECORE</h2>
+        </div>
+
+        <div class="footer__column">
+            <h3>МАГАЗИН</h3>
+
+            <a href="/про-нас/about-us.html">Про нас</a>
+            <a href="/новинки/new-items.html">Новинки</a>
+            <a href="/розпродаж/sale.html">Розпродаж</a>
+            <a href="/контакти/contacts.html">Контакти</a>
+        </div>
+
+        <div class="footer__column">
+            <h3>КАТАЛОГ</h3>
+
+            <a href="/nike/nike.html">Nike</a>
+            <a href="/adidas/adidas.html">Adidas</a>
+            <a href="/newbalance/newbalance.html">New Balance</a>
+            <a href="/Jacquemus/Jacquemus.html">Jacquemus</a>
+        </div>
+
+        <div class="footer__column">
+            <h3>СОЦ СЕТИ</h3>
+
+            <a href="https://www.instagram.com/leecore.store?igsh=MWJzbTF0dW8yYWFheg==" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="https://t.me/Leecore_gg" target="_blank" rel="noopener noreferrer">Telegram</a>
+            <a href="#">TikTok</a>
+        </div>
+
+    </div>
+
+    <div class="footer__bottom">
+        © 2026 LEECORE. All rights reserved.
+    </div>
+
+</footer>
+
+<div class="cart-overlay" id="cartOverlay"></div>
+
+<div class="cart-sidebar" id="cartSidebar">
+
+    <div class="cart-sidebar__top">
+
+        <h2>Кошик</h2>
+
+        <button class="cart-sidebar__close" id="closeCart">
+            ×
+        </button>
+
+    </div>
+
+    <div class="cart-items" id="cartItems"></div>
+
+    <div class="cart-sidebar__bottom">
+
+        <div class="cart-total">
+            Разом:
+            <span id="cartTotal">0 грн</span>
+        </div>
+
+        <button class="cart-order">
+            ОФОРМИТИ ЗАМОВЛЕННЯ
+        </button>
+
+    </div>
+
+</div>
+
+<script src="../js/script.js"></script>
 </body>
 </html>

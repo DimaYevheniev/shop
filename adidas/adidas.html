@@ -138,28 +138,12 @@
 
     <div class="header__right">
 
-        <a href="./basket/cart.html" class="header__cart">
+         <a href="#" class="header__cart" id="cartBtn">
+            🛒
+            <span class="cart-count" id="cartCount">0</span>
+         </a>
 
-            <svg xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round">
-
-                <circle cx="9" cy="21" r="1"></circle>
-                <circle cx="20" cy="21" r="1"></circle>
-
-                <path d="M1 1h4l2.68 13.39
-                        a2 2 0 0 0 2 1.61h9.72
-                        a2 2 0 0 0 2-1.61L23 6H6"></path>
-
-            </svg>
-
-        </a>
-
-    </div>
+     </div>
 
 </header>
 
@@ -205,6 +189,39 @@
     </div>
 
 </footer>
+
+<div class="cart-overlay" id="cartOverlay"></div>
+
+<div class="cart-sidebar" id="cartSidebar">
+
+    <div class="cart-sidebar__top">
+
+        <h2>Кошик</h2>
+
+        <button class="cart-sidebar__close" id="closeCart">
+            ×
+        </button>
+
+    </div>
+
+    <div class="cart-items" id="cartItems"></div>
+
+    <div class="cart-sidebar__bottom">
+
+        <div class="cart-total">
+            Разом:
+            <span id="cartTotal">0 грн</span>
+        </div>
+
+        <button class="cart-order">
+            ОФОРМИТИ ЗАМОВЛЕННЯ
+        </button>
+
+    </div>
+
+</div>
+
+<script src="../js/script.js"></script>
 
 </body>
 </html>

@@ -231,13 +231,19 @@ body
 
     &__cart
         position: relative
-    width: 45px
-    height: 45px
-    display: block
+        width: 45px
+        height: 45px
+        display: flex
+        align-items: center
+        justify-content: center
+        color: white
+        text-decoration: none
+        font-size: 24px
 
         &:hover
             color: #00aeff
             border: 2px solid white
+            border-radius: 50%
             box-shadow: 0 10px 25px rgba(0,0,0,.25)
 
 
@@ -658,66 +664,77 @@ html, body
     .brand__title
         font-size: 22px
 
-    .header
-        height: 60px
-        padding: 0 15px
-        &__cart
-            position: relative
-            width: 45px
-            height: 45px
-            display: flex
-            align-items: center
-            justify-content: center
+@media (max-width: 768px)
+        .header
+            padding: 0 20px
 
-    .header__nav
-        display: none
+            &__cart
+                position: relative
+                width: 45px
+                height: 45px
+                display: flex
+                align-items: center
+                justify-content: center
+                color: white
+                text-decoration: none
+                font-size: 24px
+                border-radius: 50%
+                transition: .3s
 
-    .header__logo
-        font-size: 18px
+                &:hover
+                    color: #00aeff
+                    border: 2px solid white
+                    border-radius: 50%
+                    box-shadow: 0 10px 25px rgba(0,0,0,.25)
 
-    .catalog
-        flex-direction: column
-        padding: 15px
+            &__nav
+                display: none
 
-    .card
-        width: 100%
+            &__logo
+                font-size: 18px
 
-    .footer
-        padding: 40px 20px
+        .catalog
+            flex-direction: column
+            padding: 15px
 
-    .footer__logo h2
-        font-size: 34px
+        .card
+            width: 100%
 
-    .footer__container
-        flex-direction: column
-        gap: 25px
+        .footer
+            padding: 40px 20px
 
-    .banner__title
-        font-size: 28px
-        padding: 0 15px
+        .footer__logo h2
+            font-size: 34px
 
-    .title-catalog
-        font-size: 28px
-        line-height: 1.2
-        display: inline-block
-        word-break: break-word
-        text-align: center
+        .footer__container
+            flex-direction: column
+            gap: 25px
 
-    .banner__box
-        top: 70%
-        padding: 0 10px
+        .banner__title
+            font-size: 28px
+            padding: 0 15px
 
-    .about-assortment__box
-        padding: 20px
-        width: auto
+        .title-catalog
+            font-size: 28px
+            line-height: 1.2
+            display: inline-block
+            word-break: break-word
+            text-align: center
 
-    .about-page
-        padding: 0 15px
+        .banner__box
+            top: 70%
+            padding: 0 10px
 
-    .about-story__card,
-    .about-benefits__card
-        width: 100%
+        .about-assortment__box
+            padding: 20px
+            width: auto
 
+        .about-page
+            padding: 0 15px
+
+        .about-story__card,
+        .about-benefits__card
+            width: 100%
 
 
 
@@ -782,12 +799,12 @@ html, body
     margin-bottom: 10px
 
 .product-info__title
-    font-size: 52px
+    font-size: 40px
     color: #111
     margin-bottom: 30px
 
 .product-info__price
-    font-size: 36px
+    font-size: 28px
     font-weight: 700
     margin-bottom: 40px
 
@@ -849,21 +866,18 @@ html, body
 
 .cart-count
     position: absolute
-    top: -6px
-    right: -6px
-    transform: translate(25%, -25%)
-    min-width: 18px
+    top: 0
+    right: 0
+    width: 18px
     height: 18px
-    padding: 0 5px
     background: #00aeff
-    border-radius: 999px
+    border-radius: 50%
     display: flex
     align-items: center
     justify-content: center
     font-size: 10px
     color: white
     font-weight: 700
-    z-index: 10
 
 .cart-overlay
     position: fixed
@@ -901,7 +915,7 @@ html, body
     margin-bottom: 40px
 
     h2
-        font-size: 42px
+        font-size: 30px
         color: #111
 
 .cart-sidebar__close
@@ -919,6 +933,7 @@ html, body
 
 .cart-item
     display: flex
+    align-items: flex-start
     gap: 20px
     border-bottom: 1px solid #eee
     padding-bottom: 25px
@@ -932,11 +947,13 @@ html, body
 
 .cart-item__info
     flex: 1
+    min-width: 0
 
     h3
         font-size: 22px
         color: #111
         margin-bottom: 10px
+        font-weight: 400
 
     p
         margin-bottom: 20px
@@ -957,6 +974,8 @@ html, body
         font-size: 20px
 
 .cart-item__right
+    width: 120px
+    flex-shrink: 0
     display: flex
     flex-direction: column
     justify-content: space-between
@@ -965,7 +984,8 @@ html, body
 .cart-item__price
     font-size: 22px
     color: #111
-    font-weight: 700
+    font-weight: 400
+    text-align: right
 
 .cart-item__delete
     background: none
@@ -1003,4 +1023,3 @@ html, body
     .cart-sidebar
         width: 100%
 
-header
